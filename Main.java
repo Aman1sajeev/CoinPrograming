@@ -23,6 +23,14 @@ public class Main{
         if(y == matrix.length-1 && x == matrix[0].length-1){
             if(value > max[0]) max[0] = value;
         }
+
+        public static void count1(int [][] matrix, int[] max, int y, int x, int value){
+            value += matrix[y][x];
+            if(y < matrix.length-1) count(matrix,max,y+1,x,value);
+            if( x < matrix[0].length-1) count(matrix,max,y,x+1,value);
+            if(y == matrix.length-1 && x == matrix[0].length-1){
+                if(value > max[0]) max[0] = value;
+            }
     }
 
     // I am adding a comment for this code
